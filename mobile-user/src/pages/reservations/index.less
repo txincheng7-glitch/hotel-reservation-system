@@ -1,0 +1,93 @@
+@import '../../styles/variables.less';
+
+.reservation-page {
+  min-height: 100vh;
+  background: @bg-gray;
+  padding: 20rpx;
+  padding-bottom: 160rpx;
+  padding-bottom: calc(160rpx + env(safe-area-inset-bottom));
+}
+
+.status-tabs {
+  display: flex;
+  gap: 16rpx;
+  background: #fff;
+  padding: 16rpx;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 14rpx 0;
+  font-size: 26rpx;
+  color: @gray;
+  background: @bg-gray;
+  border-radius: 12rpx;
+}
+
+.tab.active {
+  color: #fff;
+  background: @primary;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 22rpx;
+  margin-bottom: 20rpx;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.status {
+  font-size: 24rpx;
+  color: @gray;
+}
+
+.meta {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: @gray;
+}
+
+.price {
+  margin-top: 12rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: @danger;
+}
+
+.actions {
+  margin-top: 16rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cancel-btn {
+  height: 64rpx;
+  line-height: 64rpx;
+  padding: 0 24rpx;
+  border-radius: 12rpx;
+  background: @danger;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.load-more {
+  text-align: center;
+  color: @gray;
+  padding: 24rpx 0;
+}

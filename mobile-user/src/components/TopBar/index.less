@@ -1,0 +1,47 @@
+@import '../../styles/variables.less';
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  height: 88rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  background: #fff;
+  border-bottom: 2rpx solid @light-gray;
+}
+
+.top-bar__left,
+.top-bar__right {
+  width: 80rpx;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar__left {
+  justify-content: flex-start;
+}
+
+.top-bar__right {
+  justify-content: flex-end;
+}
+
+.top-bar__back {
+  font-size: 40rpx;
+  color: #333;
+  line-height: 1;
+}
+
+.top-bar__title {
+  flex: 1;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 600;
+}
