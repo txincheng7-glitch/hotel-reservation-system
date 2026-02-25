@@ -1,0 +1,62 @@
+/* 容器样式 */
+.container {
+  padding: 24px;
+}
+
+/* 工具栏样式 */
+.toolbar {
+  margin-bottom: 16px;
+}
+
+/* 主要搜索框 */
+.mainSearch {
+  width: 200px;
+}
+
+/* 过滤下拉框 */
+.filterDropdown {
+  padding: 8px;
+}
+
+/* 过滤搜索框 */
+.filterSearch {
+  width: 150px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* 过滤按钮 */
+.filterButton {
+  width: 90px;
+}
+
+/* 表格样式 */
+.table {
+  width: 100%;
+}
+
+/* 操作按钮 */
+.actionButton {
+  margin-right: 8px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .mainSearch {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .toolbar > * {
+    width: 100%;
+  }
+}
