@@ -1,0 +1,23 @@
+/* 容器样式 */
+.container {
+  padding: 12px;
+}
+
+/* 表单组样式 */
+.formGroup {
+  margin-bottom: 16px;
+}
+
+/* 表单标签样式 */
+.formLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* 错误信息样式 */
+.errorMessage {
+  color: #ff4d4f;
+  margin-top: 8px;
+  font-size: 12px;
+}

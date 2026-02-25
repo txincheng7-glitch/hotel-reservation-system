@@ -1,0 +1,17 @@
+/* 容器样式 */
+.container {
+  width: 100vw;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-image: url("../../../common/image/welcome.png");
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    height: 80vh;
+  }
+}
