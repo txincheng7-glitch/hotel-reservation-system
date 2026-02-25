@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 项目的核心代码目录
 
 src/
@@ -15,6 +15,5 @@ src/
 │   └── mockData.js
 ├── config/               # 项目配置
 └── app.jsx               # 全局入口
-=======
+
 # hotel-reservation-system
->>>>>>> ecfc3ac01740a195b55b8ae80e212ce47ac5c23a
