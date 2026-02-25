@@ -1,0 +1,38 @@
+@import '../../styles/variables.less';
+
+.bottom-tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 900;
+  background: #fff;
+  border-top: 2rpx solid @light-gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-tabbar__row {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-tabbar__item {
+  flex: 1;
+  text-align: center;
+  padding: 22rpx 0;
+}
+
+.bottom-tabbar__text {
+  font-size: 28rpx;
+  color: @gray;
+}
+
+.bottom-tabbar__item.active .bottom-tabbar__text {
+  color: @primary;
+  font-weight: 600;
+}
+
+.bottom-tabbar__safe {
+  height: env(safe-area-inset-bottom);
+}

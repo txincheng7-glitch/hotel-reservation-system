@@ -1,0 +1,295 @@
+@import '../../styles/variables.less';
+
+.hotel-search-page {
+	min-height: 100vh;
+	padding-bottom: 140rpx;
+	padding-bottom: calc(140rpx + env(safe-area-inset-bottom));
+}
+
+// Banner
+.banner {
+	position: relative;
+	width: 100%;
+
+	.banner-img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// 核心查询区
+.search-core {
+	margin: 20rpx;
+	padding: 30rpx;
+	background: #fff;
+	border-radius: 16rpx;
+	box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+// 定位 + 搜索
+.search-input-row {
+	display: flex;
+	align-items: center;
+	gap: 20rpx;
+	margin-bottom: 30rpx;
+
+	.location {
+		display: flex;
+		align-items: center;
+		gap: 8rpx;
+		color: #333;
+
+		.location-icon {
+			font-size: 32rpx;
+		}
+
+		.location-text {
+			font-size: 28rpx;
+			white-space: nowrap;
+		}
+
+		.location-arrow {
+			font-size: 24rpx;
+			color: @gray;
+		}
+	}
+
+	.location-locate {
+		margin-left: 12rpx;
+		font-size: 24rpx;
+		color: @primary;
+		white-space: nowrap;
+	}
+
+	.search-input {
+		flex: 1;
+		height: 72rpx;
+		line-height: 72rpx;
+		padding: 0 30rpx;
+		border-radius: 36rpx;
+		background: @bg-gray;
+		border: none;
+		outline: none;
+		font-size: 28rpx;
+	}
+
+	// H5: Taro Input renders as <taro-input-core><input.weui-input /></taro-input-core>
+	// Use flexbox on the host to vertically center the real input.
+	taro-input-core.search-input {
+		display: flex;
+		align-items: center;
+	}
+
+	taro-input-core.search-input .weui-input {
+		flex: 1;
+		height: 40rpx;
+		line-height: 40rpx;
+		padding: 0;
+		border: none;
+		outline: none;
+		background: transparent;
+		font-size: inherit;
+		color: inherit;
+	}
+}
+
+// 日期选择
+.date-select {
+	display: flex;
+	align-items: center;
+	gap: 16rpx;
+	padding: 20rpx 24rpx;
+	border: 2rpx solid @light-gray;
+	border-radius: 16rpx;
+	margin-bottom: 30rpx;
+	color: @gray;
+
+	.date-icon {
+		font-size: 32rpx;
+	}
+
+	.date-text {
+		flex: 1;
+		font-size: 28rpx;
+	}
+
+	.date-arrow {
+		font-size: 24rpx;
+	}
+}
+
+// 筛选 + 快捷标签
+.filter-tag-row {
+	display: flex;
+	align-items: center;
+	gap: 20rpx;
+	flex-wrap: wrap;
+	margin-bottom: 30rpx;
+
+	.filter-btn {
+		padding: 12rpx 24rpx;
+		border-radius: 24rpx;
+		font-size: 26rpx;
+		background: #fff;
+		color: @primary;
+		border: 2rpx solid @primary;
+	}
+
+	.tag-list {
+		display: flex;
+		gap: 16rpx;
+		flex-wrap: wrap;
+		flex: 1;
+
+		.quick-tag {
+			padding: 12rpx 24rpx;
+			border-radius: 24rpx;
+			font-size: 24rpx;
+			background: @bg-gray;
+			color: @gray;
+
+			&.active {
+				background: #e6f4ff;
+				color: @primary;
+			}
+		}
+	}
+}
+
+// 搜索按钮
+.search-btn {
+	width: 100%;
+	height: 88rpx;
+	border-radius: 44rpx;
+	font-size: 32rpx;
+	background: @primary;
+}
+
+// 弹窗遮罩
+.popup-mask {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.4);
+	display: flex;
+	align-items: flex-end;
+	z-index: 2000;
+}
+
+.popup-title {
+	font-size: 32rpx;
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 20rpx;
+}
+
+// 日历弹窗
+.date-popup {
+	width: 100%;
+	height: 80%;
+	background: #fff;
+	border-top-left-radius: 20rpx;
+	border-top-right-radius: 20rpx;
+	padding: 30rpx;
+	display: flex;
+	flex-direction: column;
+	gap: 20rpx;
+}
+
+.popup-confirm-btn {
+	width: 100%;
+	height: 88rpx;
+	border-radius: 16rpx;
+	margin-top: auto;
+}
+
+// 筛选弹窗
+.filter-popup {
+	width: 100%;
+	height: 40%;
+	background: #fff;
+	border-top-left-radius: 20rpx;
+	border-top-right-radius: 20rpx;
+	padding: 30rpx;
+	display: flex;
+	flex-direction: column;
+	gap: 40rpx;
+
+	.filter-title {
+		font-size: 32rpx;
+		font-weight: 600;
+		color: #333;
+	}
+
+	.filter-item {
+		display: flex;
+		flex-direction: column;
+		gap: 20rpx;
+
+		.filter-label {
+			font-size: 28rpx;
+			color: @gray;
+			font-weight: 500;
+		}
+
+		.filter-list {
+			display: flex;
+			gap: 20rpx;
+			flex-wrap: wrap;
+
+			.filter-tag {
+				padding: 16rpx 32rpx;
+				border-radius: 8rpx;
+				font-size: 26rpx;
+				background: @bg-gray;
+				color: @gray;
+
+				&.active {
+					background: #e6f4ff;
+					color: @primary;
+				}
+			}
+		}
+	}
+
+	.filter-confirm-btn {
+		width: 100%;
+		height: 88rpx;
+		border-radius: 16rpx;
+		margin-top: auto;
+	}
+}
+
+// 城市选择弹窗
+.city-popup {
+	width: 100%;
+	background: #fff;
+	border-top-left-radius: 20rpx;
+	border-top-right-radius: 20rpx;
+	padding: 30rpx;
+	padding-bottom: calc(30rpx + env(safe-area-inset-bottom));
+	max-height: 70vh;
+	overflow: auto;
+}
+
+.city-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16rpx;
+}
+
+.city-item {
+	padding: 16rpx 28rpx;
+	border-radius: 999rpx;
+	font-size: 26rpx;
+	background: @bg-gray;
+	color: @gray;
+
+	&.active {
+		background: #e6f4ff;
+		color: @primary;
+	}
+}
+
