@@ -34,41 +34,48 @@
 - **RESTful API** - 遵循 REST 架构风格的 API 设计
 - **中间件模式** - 统一响应格式、认证授权、错误处理
 
-
-
 ## 项目结构
 
 ```
 hotel_backend/
-├── config/                    # 配置文件
-│   └── db.js                 # 数据库连接配置
-├── controllers/               # 控制器层（6个）
-│   ├── AuthController.js      # 认证控制器
+├── config/                      # 配置文件
+│   └── db.js                    # 数据库连接配置
+│   └── oss.js                   # 对象存储配置
+│   └── swagger.js               # Swagger 配置
+├── controllers/                 # 控制器层（7个）
+│   ├── AdminController.js       # 管理员控制器
+│   ├── AuthController.js        # 认证控制器
+│   ├── MerchantController.js    # 商户端控制器
 │   ├── PublicHotelController.js # 酒店公共接口控制器
-│   ├── MerchantController.js   # 商户端控制器
-│   ├── AdminController.js      # 管理员控制器
 │   ├── ReservationController.js # 预订控制器
-│   └── TagGuestController.js   # 标签和入住人控制器
-├── middleware/                # 中间件层（2个）
-│   ├── auth.js               # JWT认证和权限控制中间件
-│   └── responseFormatter.js  # 统一响应格式中间件
-├── models/                    # 数据模型层（5个）
-│   ├── Hotel.js              # 酒店模型
-│   ├── Room.js               # 房型模型
-│   ├── Reservation.js        # 预订模型
-│   ├── Tag.js                # 标签模型
-│   └── Guest.js              # 入住人模型
-├── routes/                    # 路由层（6个）
-│   ├── authRoutes.js         # 认证路由
-│   ├── publicHotelRoutes.js  # 酒店公共路由
-│   ├── merchantRoutes.js     # 商户端路由
-│   ├── adminRoutes.js        # 管理员路由
-│   ├── reservationRoutes.js   # 预订路由
-│   └── tagGuestRoutes.js     # 标签和入住人路由
-├── index.js                   # 应用入口
-├── hotel.sql                  # 数据库初始化脚本
-├── package.json              # 项目依赖配置
-├── API.md                    # API 接口文档
-├── README.md                 # 项目说明文档
-└── 接口文档.md                # 原始接口文档
+│   ├── TagGuestController.js    # 标签和入住人控制器
+│   └── UploadController.js      # 上传控制器
+├── middleware/                  # 中间件层（2个）
+│   ├── auth.js                  # JWT认证和权限控制中间件
+│   └── responseFormatter.js     # 统一响应格式中间件
+├── models/                      # 数据模型层（8个）
+│   ├── Facility.js              # 设施模型
+│   ├── Guest.js                 # 入住人模型
+│   ├── Hotel.js                 # 酒店模型
+│   ├── HotelImage.js            # 酒店图片模型
+│   ├── Reservation.js           # 预订模型
+│   ├── Room.js                  # 房型模型
+│   ├── Tag.js                   # 标签模型
+│   └── User.js                  # 用户模型
+├── routes/                      # 路由层（7个）
+│   ├── adminRoutes.js           # 管理员路由
+│   ├── authRoutes.js            # 认证路由
+│   ├── merchantRoutes.js        # 商户端路由
+│   ├── publicHotelRoutes.js     # 酒店公共路由
+│   ├── reservationRoutes.js     # 预订路由
+│   ├── tagGuestRoutes.js        # 标签和入住人路由
+│   └── uploadRoutes.js          # 上传路由
+├── .env                         # 环境变量配置
+├── .gitignore                   # Git 忽略文件配置
+├── 接口文档.md                   # 原始接口文档
+├── API.md                       # API 接口文档
+├── hotel.sql                    # 数据库初始化脚本
+├── index.js                     # 应用入口
+├── package.json                 # 项目依赖配置
+└── README.md                    # 项目说明文档
 ```
