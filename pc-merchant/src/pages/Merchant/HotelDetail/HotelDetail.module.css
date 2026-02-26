@@ -1,0 +1,162 @@
+/* 容器样式 */
+.container {
+  padding: 24px;
+}
+
+/* 头部导航 */
+.header {
+  margin-bottom: 24px;
+}
+
+/* 酒店卡片 */
+.hotelCard {
+  margin-bottom: 24px;
+}
+
+/* 加载状态 */
+.loadingContainer {
+  padding: 24px;
+  text-align: center;
+}
+
+.loadingText {
+  margin-top: 16px;
+}
+
+/* 错误状态 */
+.errorContainer {
+  padding: 24px;
+  text-align: center;
+}
+
+.backButton {
+  margin-top: 16px;
+}
+
+/* 图片部分 */
+.imagesSection {
+  margin-bottom: 24px;
+}
+
+/* 主轮播图 */
+.mainCarousel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carouselItem {
+  text-align: center;
+  padding: 20px;
+}
+
+.imageType {
+  margin-top: 16px;
+}
+
+/* 编辑表单 */
+.editForm {
+  margin-bottom: 24px;
+}
+
+/* 信息部分 */
+.infoSection {
+  margin-bottom: 24px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* 描述部分 */
+.descriptionSection {
+  margin-bottom: 24px;
+}
+
+/* 标签部分 */
+.tagsSection {
+  margin-bottom: 24px;
+}
+
+/* 星级评分 */
+.star {
+  color: #ffd700;
+}
+
+/* 房型部分 */
+.roomsSection {
+  margin-bottom: 16px;
+}
+
+/* 房型卡片 */
+.roomCard {
+  margin-bottom: 16px;
+}
+
+/* 房型价格 */
+.roomPrice {
+  font-size: 18px;
+  color: #ff4d4f;
+}
+
+/* 房型图片 */
+.roomImages {
+  margin-top: 16px;
+}
+
+.roomCarousel {
+  max-width: 400;
+  margin-top: 8px;
+}
+
+.roomCarouselItem {
+  text-align: center;
+  padding: 10px;
+}
+
+/* 房间设施 */
+.roomAmenities {
+  margin-top: 16px;
+}
+
+.amenitiesList {
+  margin-top: 8px;
+}
+
+/* 操作按钮 */
+.roomActions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .mainCarousel {
+    max-width: 100%;
+  }
+  
+  .carouselItem {
+    padding: 10px;
+  }
+  
+  .carouselItem img {
+    width: 100% !important;
+  }
+  
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .sectionHeader button {
+    align-self: flex-end;
+  }
+}

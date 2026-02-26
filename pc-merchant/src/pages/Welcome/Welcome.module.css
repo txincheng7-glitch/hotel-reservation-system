@@ -1,0 +1,49 @@
+.YisuTitle{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 50%;
+}
+
+.systemTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /*占满可视高度，垂直居中 */
+    text-align: center; /*文字水平居中*/
+    padding: 16px;
+    font-size: 50px;
+}
+
+/* 轮播项样式 */
+.carouselItem {
+    margin: 0;
+    height: 100vh;
+    color: #fff;
+    line-height: 160px;
+    text-align: center;
+}
+
+/* 欢迎图片轮播项 */
+.welcomeItem {
+    background: center/cover no-repeat;
+    background-image: url("../../common/image/welcome0.png");
+}
+
+/* 登录页面轮播项 */
+.loginItem {
+    background: center/cover no-repeat;
+    background-image: url("../../common/image/login.png");
+}
+
+/* 登录容器 */
+.loginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 400px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}

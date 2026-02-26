@@ -1,0 +1,68 @@
+/* 表格根容器 */
+.tableRoot {
+  color: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 表格标题 */
+.tableTitle {
+  background-image: linear-gradient(90deg, #6a5acd, #836fff);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 12px 16px;
+}
+
+/* 表格页脚 */
+.tableFooter {
+  color: #9ca3af;
+}
+
+/* 表格头部单元格 */
+.tableHeaderCell {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #b8bdfd;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 表格分页 */
+.tablePagination {
+  padding: 10px;
+}
+
+.tablePaginationItem {
+  color: #b8bdfd;
+}
+
+/* 星级评分 */
+.star {
+  color: #ffd700;
+}
+
+/* 轮播图 */
+.carousel {
+  max-height: 500px;
+}
+
+/* 轮播图中的图片 */
+.carouselImage {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+/* 图片标题 */
+.imageCaption {
+  text-align: center;
+  margin-top: 16px;
+  color: #666;
+}
+
+/* 无图片状态 */
+.noImage {
+  text-align: center;
+  padding: 40px 0;
+  color: #999;
+}
